@@ -1,0 +1,541 @@
+@font-face {
+    font-family: 'Poppins';
+    src : url(../fonts/Poppins-Regular.ttf)
+ }
+
+ @font-face {
+    font-family: 'Inter';
+    src : url(../fonts/Inter-Regular.ttf)
+ }
+
+*{margin:0;
+padding: 0;}
+body {
+    background-color: #FFFFFF !important;
+}
+.cont_1 {
+  background: linear-gradient(155.28deg, #383638 2.06%, #0B0B0B 33.08%);
+
+    
+}
+
+a{
+    text-decoration: none;
+}
+li >a {
+font-family: 'Poppins';
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: #8B8E99;
+
+}
+.dropdown>a {
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #8B8E99;
+    
+    }
+
+   
+
+   
+    
+   
+    .nav{
+      
+      margin: auto;
+      
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo{
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-transform: uppercase;
+      color:#ffffff;
+    }
+    
+    .box{
+      color:white;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      top:-10px;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .cart-count{
+      position: absolute;
+      background-color: #2f3542;
+      top: -5px;
+      right: 0;
+      padding: 3px;
+      height: 20px;
+      width: 20px;
+      line-height:20px ;
+      border-radius: 50%;
+      z-index: 99;
+    }
+    
+    #cart-icon{
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      top:10px;
+      left: -8px;
+    }
+    
+   #vvvv {
+    display: flex;
+    justify-content: space-around;
+    flex: wrap;
+    }
+    
+    
+    
+    h2.title{
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color:#ffffff;
+    }
+    
+    .shop-content{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+      gap:1.5rem;
+      justify-content: center;
+      align-content: center;
+    }
+    
+    #food-box{
+      position: relative;
+      width: 23%;
+      padding: 10px;
+      box-shadow: 0 1px 4px pink;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+    #main{
+      display: flex;
+      justify-content: space-around ;
+      flex-wrap:wrap;
+      
+    }
+    .pic{
+      overflow: hidden;
+    }
+    
+    .pic:hover img{
+    transform: scale(1.5);
+    }
+    
+    .food-img{
+      transition: 0.4s;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    
+    .food-title{
+      font-size: 1rem;
+      font-weight: 600;
+      color:#ff6348;
+    }
+    
+    .food-price{
+      font-weight:500 ;
+    }
+    
+    .add-to-cart{
+      position: absolute;
+      top: 10px;
+      right: 0;
+      border-radius: 12px;
+      background-color: blue;
+      border: none;
+      color:white;
+      padding: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.5s;
+      z-index: 1;
+    }
+ 
+    .wish-list img{
+      
+      cursor: pointer;
+      position: absolute;
+    width: 40px !important;
+    height: 40px !important;
+    top:70px;
+    right: 0;
+    }
+   .main1{
+    position: relative;
+   
+
+   width: 23%;
+   padding: 10px;
+   box-shadow: 0 1px 4px pink;
+   border-radius: 3px;
+   margin-bottom: 20px;
+    
+   }
+    #product-list{
+    
+      display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+ 
+  
+     }
+      
+    
+    .cart{
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 400px;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+      z-index: 100;
+    }
+    
+    .cart-active{
+      right:0;
+      transition: 0.5s;
+    }
+    
+    .cart-title{
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      padding-bottom:20px ;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .cart-box{
+      display: grid;
+      grid-template-columns: 32% 50% 18%;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      padding-bottom: 10px;
+    }
+    
+    .cart-img{
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      border:2px solid  rgba(0,0,0,0.1);
+      padding: 5px;
+    }
+    .detail-box{
+      display: grid;
+      row-gap: 0.5rem;  
+    }
+    
+    .price-box{
+      display: flex;
+        justify-content: space-between; 
+    }
+    
+    .cart-food-title{
+       font-size: 1rem;
+       text-transform: uppercase;
+       color:#ff6348;
+       font-weight: 500;
+    }
+    
+    .cart-price{
+      font-weight: 500;
+    }
+    
+    .cart-quantity{
+      border:1px solid rgba(0,0,0,0.1);
+      outline:none ;
+      width: 2.4rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+    
+    .cart-remove{
+      font-size: 24px;
+      color:red;
+      cursor: pointer;
+    }
+    
+    .total{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+    }
+    
+    .total-title{
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    
+    .total-price{
+      margin-left: 0.5rem;
+    }
+    
+    .btn-buy{
+      padding: 12px 20px;
+      background-color:#2f3542;
+      color:#fff;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    
+    #cart-close{
+      position: absolute;
+      top: 1rem;
+      right: 0.8rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+
+
+
+
+
+
+        .text1 {
+            font-family: 'Poppins';
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 80px;
+            letter-spacing: 0em;
+            color: #FFFFFF;
+            width: 430px;
+
+        }
+        .text2 {
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+            color:#8B8E99;
+            width: 440px;
+
+        }
+      
+           #email {
+                font-family: 'Poppins';
+                background-image: url(../image/Group\ 5.png);
+                background-repeat: no-repeat;
+                text-indent: 35px;
+                background-position:10px 2px;
+                border: none;
+                outline: none;
+            }
+        .button1 {
+            font-family: 'Poppins';
+            width: 115px; 
+            height:40px; 
+            background-color: #3858D6;
+            border-radius: 10px; 
+            color:#FFFFFF;
+            border: none;
+        }
+        h4{
+            font-family: 'Inter';
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: black;
+
+        }
+        .text3 {
+            font-family: 'Inter';
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #8B8E99;
+
+        }
+        .text4 {
+            font-family: 'Inter';
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: center;
+            color:#3858D6;
+
+        }
+        h5{
+            font-family: Inter;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+        h6{
+            font-family: 'Inter';
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #1E1D1D;
+
+        }
+        .text5 {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color:#8B8E99;
+
+        }
+        .cont_6 {
+            background-color: #F6F6F6; 
+            border-radius: 22px;
+            
+        }
+        .text6 {
+            font-family: 'Inter';
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 0em;
+            text-align: left;
+            color:#1E1D1D;
+
+        }
+        .text7 {
+            font-family: 'Inter';
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color:#8B8E99;
+
+        }
+        #email1 {
+            font-family: 'Poppins';
+            background-repeat: no-repeat;
+            text-indent: 30px;
+            background-position:5px 3px;
+            border: none;
+            outline: none;
+        }
+        .button2{
+            font-family: 'Poppins';
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: center;
+            background-color: #3858D6;
+            border: none;
+            color: #FFFFFF;
+            border-radius: 10px;
+
+        }
+       .cont_7{
+        background: linear-gradient(155.28deg, #383638 2.06%, #0B0B0B 33.08%);
+       }
+       .text8 {
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+      
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+        
+
+       }
+       .button7 {
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: center;
+        color:#F6F6F6;
+        background-color: #3858D6;
+        border: #FFFFFF;
+        width: 196px;
+        height: 46px;
+        border-radius: 10px;
+
+       }
+      
+     
+      #item-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap:30px;
+        
+    }
+    #item-list img {
+        width: 250px;
+        height: 250px;
+    }
+    #main3{
+     box-shadow: 3px solid pink !important;
+     
+    height: 430px;
+    position: relative;
+    }
+   
+    #total-items{
+        position: absolute;
+        top:-10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: aliceblue;
+    }
+    #addcart{
+        
+       
+       top:-1px;
+        width: 30px !important;
+        height: 30px !important;
+        
+    }
+    #button1{
+       
+        border-radius:12px!important;
+        border: none;
+        background-color: blue;
+    }
